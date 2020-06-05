@@ -43,7 +43,21 @@ class ArrayQueue
         return true;
     }
 
-    unsigned Size() { return 0; }
+    unsigned Size()
+    {
+        if (m_isFull)
+        {
+            return m_data.size();
+        }
+        int size =
+            static_cast<int>(m_writeIndex) - static_cast<int>(m_readIndex);
+
+        if (size < 0)
+        {
+            size += m_data.size();
+        }
+        return size;
+    }
 
     unsigned Capacity() { return m_data.size(); }
 
@@ -53,7 +67,7 @@ class ArrayQueue
         m_readIndex = 0;
         m_writeIndex = 0;
 
-        return m_data.resize();
+        return m_data.resize(capacity);
     }
 
     void Display()

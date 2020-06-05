@@ -1,4 +1,5 @@
-#include "ArrayQueue.cpp"
+#include "ArrayQueue.h"
+#include "ArrayStack.h"
 #include <iostream>
 
 // act as test for DS implementations
@@ -33,53 +34,70 @@ int main()
 
     queue.Display();
     queue.Push(2);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(3);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(4);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(6);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(2);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(2);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(3);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(4);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(6);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Push(2);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
     queue.Pop(sample);
+    std::cout << "size: " << queue.Size() << '\n';
 
     queue.Display();
+    std::cout << "size: " << queue.Size() << '\n';
 
     return 0;
 }
