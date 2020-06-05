@@ -35,7 +35,7 @@ class ArrayStack
 
     bool Pop(T& val)
     {
-        const auto curIdx = m_idx.load(std::memory_order_relaxed);
+        const auto curIdx = m_idx.load(std::memory_order_acquire);
         if (curIdx == -1)
         {
             return false;
@@ -50,7 +50,7 @@ class ArrayStack
 
     bool Seek(T&& val)
     {
-        const auto curIdx = m_idx.load(std::memory_order_relaxed);
+        const auto curIdx = m_idx.load(std::memory_order_acquire);
         if (curIdx == -1)
         {
             return false;
