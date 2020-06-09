@@ -71,6 +71,8 @@ void TestSingleThreaded()
     {
         // move degrades to copy for standard types
         CheckReturnTrue(stack.Push(std::move(i)));
+        CheckReturnTrue(stack.Seek(retVal));
+        CheckReturnTrue(retVal == i);
         CheckReturnTrue(stack.SizeGuess() == i);
     }
     CheckReturnFalse(stack.Push(0));

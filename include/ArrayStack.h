@@ -53,7 +53,7 @@ class ArrayStack
         return true;
     }
 
-    bool Seek(T&& val)
+    bool Seek(T& val)
     {
         const auto curIdx = m_idx.load(std::memory_order_acquire);
         if (curIdx == -1)
